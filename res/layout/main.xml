@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/trainingSetLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trénovacia vzorka:\t"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/activeTrainingSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/trainingSetLabel"
+        android:text="default"
+        android:textSize="20sp" >
+
+    </TextView>
+
+    <Button
+        android:id="@+id/trainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/deleteTrainingSetButton"
+        android:text="Trénuj" />
+
+    <Button
+        android:id="@+id/deleteTrainingSetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/gestureLabel"
+        android:layout_marginTop="30sp"
+        android:text="Vymaž vzorku" />
+
+    <EditText
+        android:id="@+id/gestureName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startNewSetButton"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/gestureLabel"
+        android:ems="10"
+        android:inputType="text"
+        android:singleLine="true"
+        android:text="gesto" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/gestureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/gestureName"
+        android:layout_alignBottom="@+id/gestureName"
+        android:layout_alignParentLeft="true"
+        android:text="Meno gesta:"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/startNewSetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/trainingSetLabel"
+        android:layout_marginTop="38sp"
+        android:text="Zmeň trénovaciu množinu" />
+
+    <EditText
+        android:id="@+id/trainingSetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/trainingSetLabel"
+        android:ems="10"
+        android:inputType="text"
+        android:text="default" />
+
+    <Button
+        android:id="@+id/TrainOK"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_below="@+id/trainButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text="" />
+
+</RelativeLayout>
